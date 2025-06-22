@@ -12,7 +12,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
 
 
 # Read the CSV file
-retail_df = pd.read_csv("synthetic_retail_data.csv")
+retail_df = pd.read_csv("retail_data.csv")
 
 # Create RFM features per customer
 snapshot_date = pd.to_datetime(retail_df['InvoiceDate']).max() + timedelta(days=1)
