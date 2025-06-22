@@ -85,6 +85,3 @@ basket = basket.applymap(lambda x: 1 if x > 0 else 0)
 frequent_itemsets = apriori(basket, min_support=0.02, use_colnames=True)
 rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1.0)
 
-# Show top 10 association rules
-print("\nTop Association Rules:")
-print(rules[['antecedents','consequents','support','confidence','lift']].head(10))
